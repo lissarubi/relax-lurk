@@ -1,16 +1,28 @@
 {
   "name": "relax-lurk",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.4.0",
+  "description": "A auto-lurker for Twitch",
+  "main": "src/index.js",
+  "bin": {
+    "relaxlurk": "src/index.js"
+  },
+  "dependencies": {
+    "minimist": "^1.2.5",
+    "puppeteer-core": "^5.2.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "minimist": "^1.2.5",
-    "puppeteer": "^5.2.1"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edersonferreira/relax-lurk.git"
+  },
+  "keywords": ["lurk", "twitch", "auto-lurker", "bot", "puppeter"],
+  "author": "Ederson Ferreira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edersonferreira/relax-lurk/issues"
+  },
+  "homepage": "https://github.com/edersonferreira/relax-lurk#readme"
 }
