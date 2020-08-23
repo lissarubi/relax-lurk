@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 const puppeteer = require('puppeteer-core');
 const fs = require('fs');
 var argv = require('minimist')(process.argv.slice(2));
@@ -14,7 +13,6 @@ if (stream == undefined || chrome == undefined || cookies == undefined) {
   console.log(
     'Please, insert stream, cookies file and chrome path in the arguments.',
   );
-
 } else {
   (async () => {
     const browser = await puppeteer.launch({
@@ -28,7 +26,7 @@ if (stream == undefined || chrome == undefined || cookies == undefined) {
       height: 768,
     });
 
-    // get the user cookies, posted in options.js
+    // get the user cookies, posted in the cookies file
     await page.setCookie(...cookies);
     page.goto(`https://twitch.tv/${stream}`, {
       waitUntil: 'domcontentloaded',
@@ -39,7 +37,6 @@ if (stream == undefined || chrome == undefined || cookies == undefined) {
       try {
         await page.evaluate(() => {
           // class name of bonus buttom twitch
-
           let className = 'tw-button tw-button--success tw-interactive';
 
           let element = document.getElementsByClassName(className)[0];
